@@ -4,7 +4,7 @@ namespace Albion.Network
 {
     public class RequestPacket
     {
-        public RequestPacket(byte OperationCode, Dictionary<byte, object> Parameters)
+        internal RequestPacket(byte OperationCode, Dictionary<byte, object> Parameters)
         {
             this.OperationCode = OperationCode;
             this.Parameters = Parameters;

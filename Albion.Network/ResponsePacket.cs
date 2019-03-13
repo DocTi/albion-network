@@ -4,7 +4,7 @@ namespace Albion.Network
 {
     public class ResponsePacket
     {
-        public ResponsePacket(byte OperationCode, short ReturnCode, string DebugMessage, Dictionary<byte, object> Parameters)
+        internal ResponsePacket(byte OperationCode, short ReturnCode, string DebugMessage, Dictionary<byte, object> Parameters)
         {
             this.OperationCode = OperationCode;
             this.ReturnCode = ReturnCode;

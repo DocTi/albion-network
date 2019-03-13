@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace Albion.Network
 {
-    public class AlbionParser : PhotonParser
+    public sealed class AlbionParser : PhotonParser
     {
         private readonly ICollection<IPacketHandler> handlers;
 

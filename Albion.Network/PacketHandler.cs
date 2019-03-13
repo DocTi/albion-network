@@ -2,13 +2,11 @@
 {
     public abstract class PacketHandler<TPacket> : IPacketHandler
     {
-        protected IPacketHandler NextHandler { get; private set; }
-
-        protected abstract void OnHandle(TPacket packet);
+        private IPacketHandler nextHandler;
 
         public IPacketHandler SetNext(IPacketHandler handler)
         {
-            NextHandler = handler;
+            nextHandler = handler;
 
             return handler;
         }
@@ -19,10 +17,17 @@
             {
                 OnHandle((TPacket)request);
             }
-            else if (NextHandler != null)
+            else if (nextHandler != null)
             {
-                NextHandler.Handle(request);
+                Next(request);
             }
+        }
+
+        protected internal virtual void OnHandle(TPacket packet) { }
+
+        protected void Next(object request)
+        {
+            nextHandler.Handle(request);
         }
     }
 }

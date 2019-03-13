@@ -4,7 +4,7 @@ namespace Albion.Network
 {
     public class EventPacket
     {
-        public EventPacket(byte code, Dictionary<byte, object> parameters)
+        internal EventPacket(byte code, Dictionary<byte, object> parameters)
         {
             Code = code;
             Parameters = parameters;
