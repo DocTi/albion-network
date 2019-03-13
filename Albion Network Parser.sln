@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protocol16", "PhotonPackage
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network", "Albion.Network\Albion.Network.csproj", "{CA2B717D-A358-4279-827E-790A677A0E0F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "Albion.Network.Example\Albion.Network.Example.csproj", "{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion", "Albion\Albion.csproj", "{EBDE7504-30DE-49BF-AA8E-6D4A4958E51A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{CA2B717D-A358-4279-827E-790A677A0E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA2B717D-A358-4279-827E-790A677A0E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA2B717D-A358-4279-827E-790A677A0E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBDE7504-30DE-49BF-AA8E-6D4A4958E51A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBDE7504-30DE-49BF-AA8E-6D4A4958E51A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBDE7504-30DE-49BF-AA8E-6D4A4958E51A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBDE7504-30DE-49BF-AA8E-6D4A4958E51A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
