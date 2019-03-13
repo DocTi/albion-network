@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ANP.Core
+namespace Albion.Network
 {
     public class EventPacket
     {

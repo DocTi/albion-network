@@ -1,4 +1,4 @@
-﻿namespace ANP.Core
+﻿namespace Albion.Network
 {
     public interface IPacketHandler
     {

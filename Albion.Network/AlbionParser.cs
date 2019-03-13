@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace ANP.Core
+namespace Albion.Network
 {
     public class AlbionParser : PhotonParser
     {
