@@ -1,9 +1,11 @@
-﻿using PcapDotNet.Core;
+﻿using Albion.Network.Handler;
+using PcapDotNet.Core;
 using PcapDotNet.Packets;
 using PcapDotNet.Packets.IpV4;
 using PcapDotNet.Packets.Transport;
 using System;
 using System.Linq;
+using System.Threading;
 
 namespace Albion.Network.Example
 {
@@ -14,14 +16,23 @@ namespace Albion.Network.Example
         static void Main(string[] args)
         {
             albionParser = new AlbionParser();
+            albionParser.AddHandler(new MoveHandler());
 
             Console.WriteLine("Start");
 
-            var device = PacketDeviceSelector.AskForPacketDevice();
-
-            using (PacketCommunicator communicator = device.Open(65536, PacketDeviceOpenAttributes.Promiscuous, 1000))
+            var devices = LivePacketDevice.AllLocalMachine;
+            foreach (var device in devices)
             {
-                communicator.ReceivePackets(0, PacketHandler);
+                new Thread(() =>
+                {
+                    Console.WriteLine($"Open... {device.Description}");
+
+                    using (PacketCommunicator communicator = device.Open(65536, PacketDeviceOpenAttributes.Promiscuous, 1000))
+                    {
+                        communicator.ReceivePackets(0, PacketHandler);
+                    }
+                })
+                .Start();
             }
 
             Console.Read();

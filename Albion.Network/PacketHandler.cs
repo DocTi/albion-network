@@ -23,7 +23,7 @@
             }
         }
 
-        protected internal virtual void OnHandle(TPacket packet) { }
+        protected internal abstract void OnHandle(TPacket packet);
 
         protected void Next(object request)
         {

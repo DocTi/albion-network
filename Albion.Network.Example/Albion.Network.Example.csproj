@@ -64,6 +64,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Albion.Network.Handler\Albion.Network.Handler.csproj">
+      <Project>{ab7a3bcf-a640-4d5e-a76a-4e8ae5c37883}</Project>
+      <Name>Albion.Network.Handler</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Albion.Network\Albion.Network.csproj">
       <Project>{ca2b717d-a358-4279-827e-790a677a0e0f}</Project>
       <Name>Albion.Network</Name>

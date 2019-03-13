@@ -11,6 +11,10 @@ namespace Albion.Network
         public AlbionParser()
         {
             handlers = new List<IPacketHandler>();
+
+            AddHandler(new EventPacketHandler());
+            AddHandler(new RequestPacketHandler());
+            AddHandler(new ResponsePacketHandler());
         }
 
         private IPacketHandler FirstHandler

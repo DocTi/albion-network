@@ -2,15 +2,15 @@
 
 namespace Albion.Network
 {
-    internal class EventPacket
+    public class EventResult
     {
-        public EventPacket(byte code, Dictionary<byte, object> parameters)
+        internal EventResult(EventCodes eventCode, Dictionary<byte, object> parameters)
         {
-            Code = code;
+            EventCode = eventCode;
             Parameters = parameters;
         }
 
-        public byte Code { get; }
+        public EventCodes EventCode { get; }
         public Dictionary<byte, object> Parameters { get; }
     }
 }

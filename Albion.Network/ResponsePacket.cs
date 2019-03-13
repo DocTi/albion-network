@@ -2,9 +2,9 @@
 
 namespace Albion.Network
 {
-    public class ResponsePacket
+    internal class ResponsePacket
     {
-        internal ResponsePacket(byte OperationCode, short ReturnCode, string DebugMessage, Dictionary<byte, object> Parameters)
+        public ResponsePacket(byte OperationCode, short ReturnCode, string DebugMessage, Dictionary<byte, object> Parameters)
         {
             this.OperationCode = OperationCode;
             this.ReturnCode = ReturnCode;
