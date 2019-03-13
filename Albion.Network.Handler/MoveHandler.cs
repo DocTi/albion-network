@@ -6,7 +6,14 @@ namespace Albion.Network.Handler
     {
         protected override void OnHandle(RequestResult packet)
         {
-            Console.WriteLine("Request: Move");
+            if (packet.OperationCode != OperationCodes.Move)
+            {
+                Next(packet);
+            }
+            else
+            {
+                Console.WriteLine("Request: Move");
+            }
         }
     }
 }
