@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Albion.Common\Albion.Common.csproj" />
+    <ProjectReference Include="..\Albion.Network\Albion.Network.csproj" />
+  </ItemGroup>
+
 </Project>
