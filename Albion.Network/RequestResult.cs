@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Albion.Common;
+using System.Collections.Generic;
 
 namespace Albion.Network
 {

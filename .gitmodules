@@ -2,3 +2,6 @@
 	path = PhotonPackageParser
 	url = https://github.com/DocTi/PhotonPackageParser.git
 	branch = dev-new
+[submodule "albion-common"]
+	path = albion-common
+	url = https://github.com/DocTi/albion-common.git
