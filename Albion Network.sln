@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Network", "Albion.Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "Albion.Network.Example\Albion.Network.Example.csproj", "{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Common", "albion-common\Albion.Common\Albion.Common.csproj", "{E430609D-C574-4385-8259-BB357A5569F6}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,10 +33,6 @@ Global
 		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E430609D-C574-4385-8259-BB357A5569F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E430609D-C574-4385-8259-BB357A5569F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E430609D-C574-4385-8259-BB357A5569F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E430609D-C574-4385-8259-BB357A5569F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

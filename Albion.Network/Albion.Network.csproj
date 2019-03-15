@@ -5,7 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\albion-common\Albion.Common\Albion.Common.csproj" />
     <ProjectReference Include="..\PhotonPackageParser\PhotonPackageParser\PhotonPackageParser.csproj" />
   </ItemGroup>
 
