@@ -6,7 +6,9 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Albion.Common\Albion.Common.csproj" />
+    <ProjectReference Include="..\Albion.Event\Albion.Event.csproj" />
     <ProjectReference Include="..\Albion.Network\Albion.Network.csproj" />
+    <ProjectReference Include="..\Albion.Operation\Albion.Operation.csproj" />
   </ItemGroup>
 
 </Project>
