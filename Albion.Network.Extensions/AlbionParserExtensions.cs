@@ -1,11 +1,14 @@
 ﻿// This is an open source non-commercial project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
-namespace Albion.Network
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Albion.Network.Extensions
 {
-    public interface IPacketHandler
+    public static class AlbionParserExtensions
     {
-        IPacketHandler SetNext(IPacketHandler handler);
-        void Handle(object request);
+        // TODO
     }
 }

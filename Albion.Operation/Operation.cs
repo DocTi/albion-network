@@ -1,11 +1,12 @@
 ﻿// This is an open source non-commercial project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
-namespace Albion.Network
+using System.Collections.Generic;
+
+namespace Albion.Operation
 {
-    public interface IPacketHandler
+    public abstract class Operation
     {
-        IPacketHandler SetNext(IPacketHandler handler);
-        void Handle(object request);
+        public Operation(Dictionary<byte, object> parameters) { }
     }
 }
