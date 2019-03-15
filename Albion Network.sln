@@ -11,6 +11,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Network", "Albion.Ne
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "Albion.Network.Example\Albion.Network.Example.csproj", "{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Common", "Albion.Common\Albion.Common.csproj", "{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Extensions", "Albion.Network.Extensions\Albion.Network.Extensions.csproj", "{C7B6D28A-20F3-49B2-B2AC-6747820A39F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Handler", "Albion.Handler\Albion.Handler.csproj", "{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Operation", "Albion.Operation\Albion.Operation.csproj", "{58C76E58-A540-4FFC-8CC2-9A410AA2889A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Event", "Albion.Event\Albion.Event.csproj", "{2F87F26A-E4BB-4CD4-8441-37BD97374156}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +43,26 @@ Global
 		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C7B6D28A-20F3-49B2-B2AC-6747820A39F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7B6D28A-20F3-49B2-B2AC-6747820A39F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7B6D28A-20F3-49B2-B2AC-6747820A39F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7B6D28A-20F3-49B2-B2AC-6747820A39F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2F87F26A-E4BB-4CD4-8441-37BD97374156}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2F87F26A-E4BB-4CD4-8441-37BD97374156}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2F87F26A-E4BB-4CD4-8441-37BD97374156}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2F87F26A-E4BB-4CD4-8441-37BD97374156}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
