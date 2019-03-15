@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.106
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotonPackageParser", "PhotonPackageParser\PhotonPackageParser\PhotonPackageParser.csproj", "{78ADAD95-7E81-4BAF-B7FA-5A53C7857A8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protocol16", "PhotonPackageParser\Protocol16\Protocol16.csproj", "{591D37A8-2AAE-40AA-B92A-4B52C86090A6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Network", "Albion.Network\Albion.Network.csproj", "{CA2B717D-A358-4279-827E-790A677A0E0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "Albion.Network.Example\Albion.Network.Example.csproj", "{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Common", "albion-common\Albion.Common\Albion.Common.csproj", "{E430609D-C574-4385-8259-BB357A5569F6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{78ADAD95-7E81-4BAF-B7FA-5A53C7857A8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{78ADAD95-7E81-4BAF-B7FA-5A53C7857A8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{78ADAD95-7E81-4BAF-B7FA-5A53C7857A8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{78ADAD95-7E81-4BAF-B7FA-5A53C7857A8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{591D37A8-2AAE-40AA-B92A-4B52C86090A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{591D37A8-2AAE-40AA-B92A-4B52C86090A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{591D37A8-2AAE-40AA-B92A-4B52C86090A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{591D37A8-2AAE-40AA-B92A-4B52C86090A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA2B717D-A358-4279-827E-790A677A0E0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA2B717D-A358-4279-827E-790A677A0E0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA2B717D-A358-4279-827E-790A677A0E0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA2B717D-A358-4279-827E-790A677A0E0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E430609D-C574-4385-8259-BB357A5569F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E430609D-C574-4385-8259-BB357A5569F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E430609D-C574-4385-8259-BB357A5569F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E430609D-C574-4385-8259-BB357A5569F6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A2C36C87-51D4-4573-89C8-825E0869D5CB}
+	EndGlobalSection
+EndGlobal
