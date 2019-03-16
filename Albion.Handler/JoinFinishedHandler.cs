@@ -2,23 +2,23 @@
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
 using Albion.Common;
+using Albion.Event;
 using Albion.Network;
-using Albion.Operation;
 
 namespace Albion.Handler
 {
-    public class MoveHandler : RequestHandler
+    public class JoinFinishedHandler : EventHandler
     {
-        protected override void OnHandle(RequestResult packet)
+        protected override void OnHandle(EventResult packet)
         {
-            if (packet.OperationCode != OperationCodes.Move)
+            if (packet.EventCode != EventCodes.JoinFinished)
             {
                 Next(packet);
             }
 
-            var moveOperation = new MoveOperation(packet.Parameters);
+            var joinFinishedEvent = new JoinFinishedEvent(packet.Parameters);
 
-            Next(moveOperation);
+            Next(joinFinishedEvent);
         }
     }
 }
