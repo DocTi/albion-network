@@ -7,7 +7,7 @@ using Albion.Network;
 
 namespace Albion.Handler
 {
-    class HarvestableObjectHandler : EventHandler
+    class HarvestableObjectHandler : EventResultHandler
     {
         protected override void OnHandle(EventResult packet)
         {

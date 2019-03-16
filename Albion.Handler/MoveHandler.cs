@@ -7,7 +7,7 @@ using Albion.Operation;
 
 namespace Albion.Handler
 {
-    public class MoveHandler : RequestHandler
+    public class MoveHandler : RequestResultHandler
     {
         protected override void OnHandle(RequestResult packet)
         {

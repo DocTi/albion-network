@@ -7,7 +7,7 @@ using Albion.Network;
 
 namespace Albion.Handler
 {
-    public class JoinFinishedHandler : EventHandler
+    public class JoinFinishedHandler : EventResultHandler
     {
         protected override void OnHandle(EventResult packet)
         {

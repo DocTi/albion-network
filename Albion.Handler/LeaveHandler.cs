@@ -6,7 +6,7 @@ using Albion.Network;
 
 namespace Albion.Handler
 {
-    public class LeaveHandler : EventHandler
+    public class LeaveHandler : EventResultHandler
     {
         protected override void OnHandle(EventResult packet)
         {
