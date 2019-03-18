@@ -24,10 +24,12 @@ namespace Albion.Network
             {
                 Next(packet);
             }
+            else
+            {
+                TEvent instance = (TEvent)Activator.CreateInstance(typeof(TEvent), packet.Parameters);
 
-            TEvent instance = (TEvent)Activator.CreateInstance(typeof(TEvent), packet.Parameters);
-
-            action.Invoke(instance);
+                action.Invoke(instance);
+            }
         }
     }
 }
