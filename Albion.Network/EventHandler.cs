@@ -1,4 +1,7 @@
-﻿using Albion.Common;
+﻿// This is an open source non-commercial project. Dear PVS-Studio, please check it.
+// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
+
+using Albion.Common;
 using Albion.Event;
 using System;
 
@@ -9,7 +12,7 @@ namespace Albion.Network
         private readonly EventCodes eventCode;
         private readonly Action<TEvent> action;
 
-        public EventHandler(EventCodes eventCode, Action<TEvent> action)
+        internal EventHandler(EventCodes eventCode, Action<TEvent> action)
         {
             this.eventCode = eventCode;
             this.action = action;

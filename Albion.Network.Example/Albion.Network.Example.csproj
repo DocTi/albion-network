@@ -64,9 +64,21 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Albion.Common\Albion.Common.csproj">
+      <Project>{eb94bae4-3bfb-47d9-aaba-f1975e44f4ca}</Project>
+      <Name>Albion.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Albion.Event\Albion.Event.csproj">
+      <Project>{2f87f26a-e4bb-4cd4-8441-37bd97374156}</Project>
+      <Name>Albion.Event</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Albion.Network\Albion.Network.csproj">
       <Project>{ca2b717d-a358-4279-827e-790a677a0e0f}</Project>
       <Name>Albion.Network</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Albion.Operation\Albion.Operation.csproj">
+      <Project>{58C76E58-A540-4FFC-8CC2-9A410AA2889A}</Project>
+      <Name>Albion.Operation</Name>
     </ProjectReference>
     <ProjectReference Include="..\PhotonPackageParser\PhotonPackageParser\PhotonPackageParser.csproj">
       <Project>{78adad95-7e81-4baf-b7fa-5a53c7857a8b}</Project>

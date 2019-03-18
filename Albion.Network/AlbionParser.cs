@@ -33,7 +33,7 @@ namespace Albion.Network
             }
         }
 
-        public AlbionParser AddHandler(IPacketHandler handler)
+        internal AlbionParser AddHandler(IPacketHandler handler)
         {
             LastHandler?.SetNext(handler);
             handlers.Add(handler);
