@@ -4,13 +4,15 @@ using System;
 
 namespace Albion.Network
 {
-    public class ResponseHandler<TOperation> : PacketHandler<ResponsePacket> where TOperation : BaseOperation, new()
+    public class ResponseHandler<TOperation> : PacketHandler<ResponsePacket> where TOperation : BaseOperation
     {
         private readonly OperationCodes operationCode;
+        private readonly Action<TOperation> action;
 
-        public ResponseHandler(OperationCodes operationCode)
+        public ResponseHandler(OperationCodes operationCode, Action<TOperation> action)
         {
             this.operationCode = operationCode;
+            this.action = action;
         }
 
         protected internal override void OnHandle(ResponsePacket packet)
@@ -20,9 +22,9 @@ namespace Albion.Network
                 Next(packet);
             }
 
-            object instance = Activator.CreateInstance(typeof(TOperation), packet.Parameters);
+            TOperation instance = (TOperation)Activator.CreateInstance(typeof(TOperation), packet.Parameters);
 
-            Next(instance);
+            action.Invoke(instance);
         }
     }
 }

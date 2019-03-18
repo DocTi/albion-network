@@ -1,32 +1,33 @@
 ﻿using Albion.Common;
 using Albion.Event;
 using Albion.Operation;
+using System;
 
 namespace Albion.Network
 {
     public static class AlbionParserExtensions
     {
-        public static AlbionParser AddEventHandler<TEvent>(this AlbionParser albionParser, EventCodes eventCode) where TEvent : BaseEvent, new()
+        public static AlbionParser AddEventHandler<TEvent>(this AlbionParser albionParser, EventCodes eventCode, Action<TEvent> action) where TEvent : BaseEvent
         {
-            var handler = new EventHandler<TEvent>(eventCode);
+            var handler = new EventHandler<TEvent>(eventCode, action);
 
             albionParser.AddHandler(handler);
 
             return albionParser;
         }
 
-        public static AlbionParser AddRequestHandler<TOpearation>(this AlbionParser albionParser, OperationCodes operationCode) where TOpearation : BaseOperation, new()
+        public static AlbionParser AddRequestHandler<TOpearation>(this AlbionParser albionParser, OperationCodes operationCode, Action<TOpearation> action) where TOpearation : BaseOperation
         {
-            var handler = new RequestHandler<TOpearation>(operationCode);
+            var handler = new RequestHandler<TOpearation>(operationCode, action);
 
             albionParser.AddHandler(handler);
 
             return albionParser;
         }
 
-        public static AlbionParser AddResponseHandler<TOperation>(this AlbionParser albionParser, OperationCodes operationCode) where TOperation : BaseOperation, new()
+        public static AlbionParser AddResponseHandler<TOperation>(this AlbionParser albionParser, OperationCodes operationCode, Action<TOperation> action) where TOperation : BaseOperation
         {
-            var handler = new ResponseHandler<TOperation>(operationCode);
+            var handler = new ResponseHandler<TOperation>(operationCode, action);
 
             albionParser.AddHandler(handler);
 
