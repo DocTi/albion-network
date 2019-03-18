@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Albion.Operation
 {
-    public class MoveOperation : Operation
+    public class MoveOperation : BaseOperation
     {
         public MoveOperation(Dictionary<byte, object> parameters) : base(parameters)
         {

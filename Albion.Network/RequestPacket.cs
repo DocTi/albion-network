@@ -1,19 +1,20 @@
 ﻿// This is an open source non-commercial project. Dear PVS-Studio, please check it.
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
+using Albion.Common;
 using System.Collections.Generic;
 
 namespace Albion.Network
 {
-    internal class RequestPacket
+    public class RequestPacket
     {
-        public RequestPacket(byte OperationCode, Dictionary<byte, object> Parameters)
+        internal RequestPacket(OperationCodes operationCode, Dictionary<byte, object> Parameters)
         {
-            this.OperationCode = OperationCode;
+            OperationCode = operationCode;
             this.Parameters = Parameters;
         }
 
-        public byte OperationCode { get; }
+        public OperationCodes OperationCode { get; }
         public Dictionary<byte, object> Parameters { get; }
     }
 }

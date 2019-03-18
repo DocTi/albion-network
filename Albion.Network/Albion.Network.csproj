@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Albion.Common\Albion.Common.csproj" />
+    <ProjectReference Include="..\Albion.Event\Albion.Event.csproj" />
+    <ProjectReference Include="..\Albion.Operation\Albion.Operation.csproj" />
     <ProjectReference Include="..\PhotonPackageParser\PhotonPackageParser\PhotonPackageParser.csproj" />
   </ItemGroup>
 

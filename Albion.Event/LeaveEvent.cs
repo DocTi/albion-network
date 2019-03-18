@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Albion.Event
 {
-    public class LeaveEvent : Event
+    public class LeaveEvent : BaseEvent
     {
         public LeaveEvent(Dictionary<byte, object> parameters) : base(parameters)
         {

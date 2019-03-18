@@ -7,7 +7,7 @@ using System.Collections.Generic;
 
 namespace Albion.Event
 {
-    public class HarvestableObjectEvent : Event
+    public class HarvestableObjectEvent : BaseEvent
     {
         public HarvestableObjectEvent(Dictionary<byte, object> parameters) : base(parameters)
         {
