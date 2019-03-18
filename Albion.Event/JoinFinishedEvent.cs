@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Albion.Event
 {
-    public class JoinFinishedEvent : Event
+    public class JoinFinishedEvent : BaseEvent
     {
         public JoinFinishedEvent(Dictionary<byte, object> parameters) : base(parameters) { }
     }

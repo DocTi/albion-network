@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Albion.Event
 {
-    public class NewSimpleHarvestableObjectListEvent : Event
+    public class NewSimpleHarvestableObjectListEvent : BaseEvent
     {
         public NewSimpleHarvestableObjectListEvent(Dictionary<byte, object> parameters) : base(parameters)
         {

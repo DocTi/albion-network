@@ -3,10 +3,10 @@
 
 using System.Collections.Generic;
 
-namespace Albion.Event
+namespace Albion.Operation
 {
-    public abstract class Event
+    public abstract class BaseOperation
     {
-        public Event(Dictionary<byte, object> parameters) { }
+        public BaseOperation(Dictionary<byte, object> parameters) { }
     }
 }
