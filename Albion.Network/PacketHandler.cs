@@ -30,7 +30,7 @@ namespace Albion.Network
 
         protected void Next(object request)
         {
-            nextHandler.Handle(request);
+            nextHandler?.Handle(request);
         }
     }
 }

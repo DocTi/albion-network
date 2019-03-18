@@ -1,4 +1,6 @@
-﻿using PcapDotNet.Core;
+﻿using Albion.Common;
+using Albion.Operation;
+using PcapDotNet.Core;
 using PcapDotNet.Packets;
 using PcapDotNet.Packets.IpV4;
 using PcapDotNet.Packets.Transport;
@@ -15,6 +17,10 @@ namespace Albion.Network.Example
         static void Main(string[] args)
         {
             albionParser = new AlbionParser();
+            albionParser.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
+            {
+                Console.WriteLine($"Move request");
+            });
 
             Console.WriteLine("Start");
 

@@ -24,10 +24,12 @@ namespace Albion.Network
             {
                 Next(packet);
             }
+            else
+            {
+                TOperation instance = (TOperation)Activator.CreateInstance(typeof(TOperation), packet.Parameters);
 
-            TOperation instance = (TOperation)Activator.CreateInstance(typeof(TOperation), packet.Parameters);
-
-            action.Invoke(instance);
+                action.Invoke(instance);
+            }
         }
     }
 }
