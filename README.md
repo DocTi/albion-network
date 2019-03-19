@@ -5,13 +5,13 @@ Provides convenient work with network events Albion Online.
 Project Description:
 
 **Albion.Common** - contains common classes.  
-**Albion.Event** - classes "Event" of events  
+**Albion.Event** - classes "Event" of events.  
 **Albion.Operation** - classes "Operation" of events.  
 **Albion.Network** - main project.  
 
 Usage example:
 
-In this example, we enable the processing of the message "Operation.Move"
+In this example, we enable the processing of the message "Operation.Move".
 ```c#
 
 using Albion.Common;
