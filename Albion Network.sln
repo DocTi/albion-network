@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Common", "Albion.Common\Albion.Common.csproj", "{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Handler", "Albion.Handler\Albion.Handler.csproj", "{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Operation", "Albion.Operation\Albion.Operation.csproj", "{58C76E58-A540-4FFC-8CC2-9A410AA2889A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Albion.Event", "Albion.Event\Albion.Event.csproj", "{2F87F26A-E4BB-4CD4-8441-37BD97374156}"
@@ -45,10 +43,6 @@ Global
 		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB94BAE4-3BFB-47D9-AABA-F1975E44F4CA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0A77DD4-EB27-458C-90F5-CCA6EEC7A4A1}.Release|Any CPU.Build.0 = Release|Any CPU
 		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{58C76E58-A540-4FFC-8CC2-9A410AA2889A}.Release|Any CPU.ActiveCfg = Release|Any CPU
