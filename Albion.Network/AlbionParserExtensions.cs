@@ -2,8 +2,6 @@
 // PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
 
 using Albion.Common;
-using Albion.Event;
-using Albion.Operation;
 using System;
 
 namespace Albion.Network

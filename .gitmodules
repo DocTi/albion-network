@@ -1,4 +1,0 @@
-[submodule "PhotonPackageParser"]
-	path = PhotonPackageParser
-	url = https://github.com/DocTi/PhotonPackageParser.git
-	branch = dev-new

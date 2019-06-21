@@ -45,6 +45,12 @@
     <Reference Include="PcapDotNet.Packets, Version=0.10.0.20603, Culture=neutral, PublicKeyToken=4b6f3e583145a652, processorArchitecture=MSIL">
       <HintPath>..\packages\PcapDotNet.0.10.2\lib\net40\PcapDotNet.Packets.dll</HintPath>
     </Reference>
+    <Reference Include="PhotonPackageParser, Version=4.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PhotonPackageParser.4.0.0\lib\net471\PhotonPackageParser.dll</HintPath>
+    </Reference>
+    <Reference Include="Protocol16, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\PhotonPackageParser.4.0.0\lib\net471\Protocol16.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -65,24 +71,20 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Albion.Common\Albion.Common.csproj">
-      <Project>{eb94bae4-3bfb-47d9-aaba-f1975e44f4ca}</Project>
+      <Project>{bad21844-f93f-4f46-b540-28631d7b0255}</Project>
       <Name>Albion.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\Albion.Event\Albion.Event.csproj">
-      <Project>{2f87f26a-e4bb-4cd4-8441-37bd97374156}</Project>
+      <Project>{b0af151a-78a3-4b07-975d-6c29611e3aa9}</Project>
       <Name>Albion.Event</Name>
     </ProjectReference>
     <ProjectReference Include="..\Albion.Network\Albion.Network.csproj">
-      <Project>{ca2b717d-a358-4279-827e-790a677a0e0f}</Project>
+      <Project>{4d1a1f8d-46e1-456d-83cf-78e4d7dd6fa7}</Project>
       <Name>Albion.Network</Name>
     </ProjectReference>
     <ProjectReference Include="..\Albion.Operation\Albion.Operation.csproj">
-      <Project>{58C76E58-A540-4FFC-8CC2-9A410AA2889A}</Project>
+      <Project>{fa3fc058-ecb5-4b10-b601-0f54db23ca92}</Project>
       <Name>Albion.Operation</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\PhotonPackageParser\PhotonPackageParser\PhotonPackageParser.csproj">
-      <Project>{78adad95-7e81-4baf-b7fa-5a53c7857a8b}</Project>
-      <Name>PhotonPackageParser</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
