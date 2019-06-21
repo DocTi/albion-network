@@ -53,5 +53,4 @@ void PacketHandler(Packet packet)
 A full example can be found here [Example](https://github.com/DocTi/albion-network/blob/master/Albion.Network.Example/Program.cs)
 
 ## Dependencies
-[PhotonPackageParser](https://github.com/DocTi/PhotonPackageParser) from forked [DocTi](https://github.com/DocTi)  
 [WinPcap](https://www.winpcap.org) which comes with [Wireshark](https://www.wireshark.org)
