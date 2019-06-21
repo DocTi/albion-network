@@ -20,9 +20,9 @@ namespace Albion.Common
         GetShopPurchaseUrl,
         GetBuyTrialDetails,
         GetReferralSeasonDetails,
+        GetReferralLink,
         GetAvailableTrialKeys,
         GetShopTilesForCategory,
-        GetShopCategories,
         Move,
         AttackStart,
         CastStart,
@@ -218,6 +218,8 @@ namespace Albion.Common
         AbandonGuildIsland,
         UpgradeMyIsland,
         UpgradeGuildIsland,
+        MoveMyIsland,
+        MoveGuildIsland,
         TerritoryFillNutrition,
         TeleportBack,
         PartyInvitePlayer,
@@ -292,6 +294,7 @@ namespace Albion.Common
         GetStrikeHistory,
         UseFunction,
         UsePortalEntrance,
+        ResetPortalBinding,
         QueryPortalBinding,
         ClaimPaymentTransaction,
         ChangeUseFlag,
@@ -357,6 +360,10 @@ namespace Albion.Common
         RetaliationAttackClaimTerritory,
         SetNextTutorialState,
         AddPlayerToMuteList,
-        RemovePlayerFromMuteList
+        RemovePlayerFromMuteList,
+        MakeTerritoryHome,
+        LeaveTerritoryHome,
+        ProductShopUserEvent,
+        SetFavoriteIsland
     }
 }

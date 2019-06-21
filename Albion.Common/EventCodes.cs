@@ -91,7 +91,8 @@ namespace Albion.Common
         RegenerationPlayerComboChanged,
         DurabilityChanged,
         NewLoot,
-        ContainerInfo,
+        AttachItemContainer,
+        DetachItemContainer,
         GuildVaultInfo,
         GuildUpdate,
         GuildPlayerUpdated,
@@ -364,6 +365,7 @@ namespace Albion.Common
         UpdateShrine,
         MutePlayerUpdate,
         ShopTileUpdate,
+        ShopUpdate,
         EasyAntiCheatKick
     }
 }
