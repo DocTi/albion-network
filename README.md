@@ -54,3 +54,9 @@ A full example can be found here [Example](https://github.com/DocTi/albion-netwo
 
 ## Dependencies
 [WinPcap](https://www.winpcap.org) which comes with [Wireshark](https://www.wireshark.org)
+
+## NuGet
+[Albion.Common](https://www.nuget.org/packages/Albion.Common/)
+[Albion.Network](https://www.nuget.org/packages/Albion.Network/)
+[Albion.Event](https://www.nuget.org/packages/Albion.Event/)
+[Albion.Operation](https://www.nuget.org/packages/Albion.Operation/)
