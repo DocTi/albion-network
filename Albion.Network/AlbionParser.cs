@@ -3,7 +3,6 @@
 
 using Albion.Common;
 using PhotonPackageParser;
-using System;
 using System.Collections.Generic;
 using System.Linq;
 
