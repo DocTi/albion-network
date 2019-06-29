@@ -3,6 +3,7 @@
 
 using Albion.Common;
 using PhotonPackageParser;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -45,7 +46,7 @@ namespace Albion.Network
         {
             if (Code == 2)
             {
-                return;
+                Parameters.Add(252, (short)EventCodes.Move);
             }
 
             EventCodes eventCode = ParseEventCode(Parameters);
