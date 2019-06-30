@@ -26,6 +26,10 @@ namespace Albion.Network.Example
             {
                 Console.WriteLine($"Id: {operation.Id} x: {operation.Position.X} y: {operation.Position.Y}");
             });
+            albionParser.AddEventHandler<NewCharacterEvent>(EventCodes.NewCharacter, (operation) =>
+            {
+                Console.WriteLine($"New ch Id: {operation.Id}");
+            });
 
             Console.WriteLine("Start");
 
