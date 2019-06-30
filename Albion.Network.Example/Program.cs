@@ -1,4 +1,5 @@
 ﻿using Albion.Common;
+using Albion.Event;
 using Albion.Operation;
 using PcapDotNet.Core;
 using PcapDotNet.Packets;
@@ -20,6 +21,10 @@ namespace Albion.Network.Example
             albionParser.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
             {
                 Console.WriteLine($"Move request");
+            });
+            albionParser.AddEventHandler<MoveEvent>(EventCodes.Move, (operation) =>
+            {
+                Console.WriteLine($"Id: {operation.Id} x: {operation.Position.X} y: {operation.Position.Y}");
             });
 
             Console.WriteLine("Start");

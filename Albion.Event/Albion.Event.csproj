@@ -44,6 +44,7 @@
     <Compile Include="HarvestableObjectEvent.cs" />
     <Compile Include="JoinFinishedEvent.cs" />
     <Compile Include="LeaveEvent.cs" />
+    <Compile Include="MoveEvent.cs" />
     <Compile Include="NewSimpleHarvestableObjectListEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
