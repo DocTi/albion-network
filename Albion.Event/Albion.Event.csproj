@@ -45,6 +45,7 @@
     <Compile Include="JoinFinishedEvent.cs" />
     <Compile Include="LeaveEvent.cs" />
     <Compile Include="MoveEvent.cs" />
+    <Compile Include="NewCharacterEvent.cs" />
     <Compile Include="NewSimpleHarvestableObjectListEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
