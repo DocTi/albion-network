@@ -149,6 +149,7 @@ namespace Albion.Common
         ConsoleEvent,
         TimeSync,
         ChangeAvatar,
+        ChangeMountSkin,
         GameEvent,
         KilledPlayer,
         Died,
@@ -366,6 +367,9 @@ namespace Albion.Common
         MutePlayerUpdate,
         ShopTileUpdate,
         ShopUpdate,
-        EasyAntiCheatKick
+        EasyAntiCheatKick,
+        UnlockVanityUnlock,
+        CustomizationChanged,
+        BankVaultInfo
     }
 }

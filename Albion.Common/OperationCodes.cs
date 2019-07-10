@@ -364,6 +364,11 @@ namespace Albion.Common
         MakeTerritoryHome,
         LeaveTerritoryHome,
         ProductShopUserEvent,
+        GetVanityUnlocks,
+        BuyVanityUnlock,
+        GetMountSkins,
+        SetMountSkin,
+        ChangeCustomization,
         SetFavoriteIsland
     }
 }
