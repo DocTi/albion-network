@@ -11,6 +11,7 @@ namespace Albion.Common
         CreateAccount,
         Login,
         SendCrashLog,
+        SendGamePingInfo,
         CreateCharacter,
         DeleteCharacter,
         SelectCharacter,
@@ -64,8 +65,8 @@ namespace Albion.Common
         BuildingNutritionSilverStorageWithdraw,
         BuildingNutritionSilverRewardSet,
         ConstructionSiteCreate,
-        PlaceableItemPlace,
-        PlaceableItemPlaceCancel,
+        PlaceableObjectPlace,
+        PlaceableObjectPlaceCancel,
         PlaceableObjectPickup,
         FurnitureObjectUse,
         FarmableHarvest,
@@ -73,8 +74,6 @@ namespace Albion.Common
         FarmableDestroy,
         FarmableGetProduct,
         FarmableFill,
-        LaborerObjectPlace,
-        LaborerObjectPlaceCancel,
         TearDownConstructionSite,
         CastleGateUse,
         AuctionCreateOffer,
@@ -157,6 +156,7 @@ namespace Albion.Common
         GetChestLogs,
         GetAccessRightLogs,
         GetGuildAccountLogs,
+        GetGuildAccountLogsLargeAmount,
         InviteToPlayerTrade,
         PlayerTradeCancel,
         PlayerTradeInvitationAccept,
@@ -369,6 +369,7 @@ namespace Albion.Common
         GetMountSkins,
         SetMountSkin,
         ChangeCustomization,
-        SetFavoriteIsland
+        SetFavoriteIsland,
+        GetGuildChallengePoints
     }
 }

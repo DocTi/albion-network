@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DebugEvent.cs" />
     <Compile Include="HarvestableObjectEvent.cs" />
     <Compile Include="JoinFinishedEvent.cs" />
     <Compile Include="LeaveEvent.cs" />
