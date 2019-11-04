@@ -33,6 +33,7 @@ namespace Albion.Common
         NewSimpleItem,
         NewFurnitureItem,
         NewJournalItem,
+        NewLaborerItem,
         NewSimpleHarvestableObject,
         NewSimpleHarvestableObjectList,
         NewHarvestableObject,
@@ -180,13 +181,11 @@ namespace Albion.Common
         RealEstateListUpdate,
         GuildLogoUpdate,
         GuildLogoChanged,
-        PlaceableItemPlace,
-        PlaceableItemPlaceCancel,
+        PlaceableObjectPlace,
+        PlaceableObjectPlaceCancel,
         FurnitureObjectBuffProviderInfo,
         FurnitureObjectCheatProviderInfo,
         FarmableObjectInfo,
-        LaborerObjectPlace,
-        LaborerObjectPlaceCancel,
         NewUnreadMails,
         GuildLogoObjectUpdate,
         StartLogout,
@@ -370,6 +369,9 @@ namespace Albion.Common
         EasyAntiCheatKick,
         UnlockVanityUnlock,
         CustomizationChanged,
-        BankVaultInfo
+        BankVaultInfo,
+        CastlePhaseChanged,
+        GuildAccountLogEvent,
+        IpChanged
     }
 }
