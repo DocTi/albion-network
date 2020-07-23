@@ -12,19 +12,17 @@ namespace Albion.Event
     {
         public HarvestableObjectEvent(Dictionary<byte, object> parameters) : base(parameters)
         {
-            var position = (float[])parameters[3];
-
             Id = Convert.ToInt32(parameters[0]);
             Type = (HarvestableType)Enum.Parse(typeof(HarvestableType), $"{parameters[1]}");
             Tier = (byte)parameters[2];
-            Position = new Position(position[0], position[1]);
+            Position = (float[])parameters[3];
             Size = (byte)parameters[4];
         }
 
         public int Id { get; }
         public HarvestableType Type { get; }
         public byte Tier { get; }
-        public Position Position { get; }
+        public float[] Position { get; }
         public byte Size { get; }
     }
 }

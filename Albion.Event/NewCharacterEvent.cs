@@ -11,17 +11,15 @@ namespace Albion.Event
     {
         public NewCharacterEvent(Dictionary<byte, object> parameters) : base(parameters)
         {
-            float[] position = (float[])parameters[12];
-
             Id = parameters[0].ToString();
             Name = parameters[1].ToString();
             GuildName = parameters.TryGetValue(8, out object guildName) ? guildName.ToString() : null;
-            Position = new Position(position[0], position[1]);
+            Position = (float[])parameters[12];
         }
 
         public string Id { get; }
         public string Name { get; }
         public string GuildName { get; }
-        public Position Position { get; }
+        public float[] Position { get; }
     }
 }

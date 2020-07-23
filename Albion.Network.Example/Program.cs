@@ -25,7 +25,7 @@ namespace Albion.Network.Example
             });
             builder.AddEventHandler<MoveEvent>(EventCodes.Move, (operation) =>
             {
-                Console.WriteLine($"Id: {operation.Id} x: {operation.Position.X} y: {operation.Position.Y}");
+                Console.WriteLine($"Id: {operation.Id} x: {operation.Position[0]} y: {operation.Position[1]}");
             });
             builder.AddEventHandler<NewCharacterEvent>(EventCodes.NewCharacter, (operation) =>
             {

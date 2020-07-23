@@ -44,7 +44,6 @@
     <Compile Include="EventCodes.cs" />
     <Compile Include="HarvestableType.cs" />
     <Compile Include="OperationCodes.cs" />
-    <Compile Include="Position.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
