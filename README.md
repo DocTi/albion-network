@@ -18,11 +18,13 @@ using Albion.Common;
 using Albion.Operation;
 using Albion.Network;
 
-var albionParser = new AlbionParser();
-albionParser.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
+ReceiverBuilder builder = ReceiverBuilder.Create();
+builder.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
 {
   Console.WriteLine($"Move request");
 });
+
+IPhotonReceiver receiver = builder.Build();
             
 ```
 
@@ -46,7 +48,7 @@ void PacketHandler(Packet packet)
     return;
   }
   
-  albionParser.ReceivePacket(udp.Payload.ToArray());
+  receiver.ReceivePacket(udp.Payload.ToArray());
 }
 ```
 
