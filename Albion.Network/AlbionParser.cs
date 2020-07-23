@@ -22,31 +22,6 @@ namespace Albion.Network
             handlers.Add(handler);
         }
 
-        //public AlbionParser AddEventHandler<TEvent>(EventCodes eventCode, Action<TEvent> action) where TEvent : BaseEvent
-        //{
-        //    handlers.Add(new EventHandler<TEvent>(eventCode, action));
-
-        //    return this;
-        //}
-
-        //public AlbionParser AddRequestHandler<TOpearation>(OperationCodes operationCode, Action<TOpearation> action) where TOpearation : BaseOperation
-        //{
-        //    var handler = new RequestHandler<TOpearation>(operationCode, action);
-
-        //    albionParser.AddHandler(handler);
-
-        //    return albionParser;
-        //}
-
-        //public AlbionParser AddResponseHandler<TOperation>(OperationCodes operationCode, Action<TOperation> action) where TOperation : BaseOperation
-        //{
-        //    var handler = new ResponseHandler<TOperation>(operationCode, action);
-
-        //    albionParser.AddHandler(handler);
-
-        //    return albionParser;
-        //}
-
         protected override void OnEvent(byte Code, Dictionary<byte, object> Parameters)
         {
             if (Code == 2)
