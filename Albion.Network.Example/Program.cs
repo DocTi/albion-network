@@ -11,25 +11,28 @@ using System.Threading;
 
 namespace Albion.Network.Example
 {
-    class Program
+    internal class Program
     {
-        static AlbionParser albionParser;
+        private static IPhotonReceiver receiver;
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
-            albionParser = new AlbionParser();
-            albionParser.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
+            ReceiverBuilder builder = ReceiverBuilder.Create();
+
+            builder.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
             {
                 Console.WriteLine($"Move request");
             });
-            albionParser.AddEventHandler<MoveEvent>(EventCodes.Move, (operation) =>
+            builder.AddEventHandler<MoveEvent>(EventCodes.Move, (operation) =>
             {
                 Console.WriteLine($"Id: {operation.Id} x: {operation.Position.X} y: {operation.Position.Y}");
             });
-            albionParser.AddEventHandler<NewCharacterEvent>(EventCodes.NewCharacter, (operation) =>
+            builder.AddEventHandler<NewCharacterEvent>(EventCodes.NewCharacter, (operation) =>
             {
                 Console.WriteLine($"New ch Id: {operation.Id}");
             });
+
+            receiver = builder.Build();
 
             Console.WriteLine("Start");
 
@@ -51,7 +54,7 @@ namespace Albion.Network.Example
             Console.Read();
         }
 
-        static void PacketHandler(Packet packet)
+        private static void PacketHandler(Packet packet)
         {
             IpV4Datagram ip = packet.Ethernet.IpV4;
             UdpDatagram udp = ip.Udp;
@@ -61,7 +64,7 @@ namespace Albion.Network.Example
                 return;
             }
 
-            albionParser.ReceivePacket(udp.Payload.ToArray());
+            receiver.ReceivePacket(udp.Payload.ToArray());
         }
     }
 }

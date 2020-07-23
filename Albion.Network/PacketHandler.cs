@@ -3,7 +3,7 @@
 
 namespace Albion.Network
 {
-    public abstract class PacketHandler<TPacket> : IPacketHandler
+    internal abstract class PacketHandler<TPacket> : IPacketHandler
     {
         private IPacketHandler nextHandler;
 
@@ -16,9 +16,9 @@ namespace Albion.Network
 
         public void Handle(object request)
         {
-            if (request is TPacket)
+            if (request is TPacket packet)
             {
-                OnHandle((TPacket)request);
+                OnHandle(packet);
             }
             else if (nextHandler != null)
             {

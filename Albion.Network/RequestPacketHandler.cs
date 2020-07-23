@@ -6,12 +6,12 @@ using System;
 
 namespace Albion.Network
 {
-    public class RequestHandler<TOperation> : PacketHandler<RequestPacket> where TOperation : BaseOperation
+    internal class RequestPacketHandler<TOperation> : PacketHandler<RequestPacket> where TOperation : BaseOperation
     {
         private readonly OperationCodes operationCode;
         private readonly Action<TOperation> action;
 
-        internal RequestHandler(OperationCodes operationCode, Action<TOperation> action)
+        public RequestPacketHandler(OperationCodes operationCode, Action<TOperation> action)
         {
             this.operationCode = operationCode;
             this.action = action;

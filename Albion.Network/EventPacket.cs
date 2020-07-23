@@ -6,9 +6,9 @@ using System.Collections.Generic;
 
 namespace Albion.Network
 {
-    public class EventPacket
+    internal class EventPacket
     {
-        internal EventPacket(EventCodes eventCode, Dictionary<byte, object> parameters)
+        public EventPacket(EventCodes eventCode, Dictionary<byte, object> parameters)
         {
             EventCode = eventCode;
             Parameters = parameters;

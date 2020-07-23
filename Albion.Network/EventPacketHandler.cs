@@ -6,12 +6,12 @@ using System;
 
 namespace Albion.Network
 {
-    public class EventHandler<TEvent> : PacketHandler<EventPacket> where TEvent : BaseEvent
+    internal class EventPacketHandler<TEvent> : PacketHandler<EventPacket> where TEvent : BaseEvent
     {
         private readonly EventCodes eventCode;
         private readonly Action<TEvent> action;
 
-        internal EventHandler(EventCodes eventCode, Action<TEvent> action)
+        public EventPacketHandler(EventCodes eventCode, Action<TEvent> action)
         {
             this.eventCode = eventCode;
             this.action = action;

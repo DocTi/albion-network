@@ -3,43 +3,49 @@
 
 using Albion.Common;
 using PhotonPackageParser;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace Albion.Network
 {
-    public sealed class AlbionParser : PhotonParser
+    internal sealed class AlbionParser : PhotonParser, IPhotonReceiver
     {
-        private readonly ICollection<IPacketHandler> handlers;
+        private readonly HandlersCollection handlers;
 
         public AlbionParser()
         {
-            handlers = new List<IPacketHandler>();
+            handlers = new HandlersCollection();
         }
 
-        private IPacketHandler FirstHandler
+        public void AddHandler<TPacket>(PacketHandler<TPacket> handler)
         {
-            get
-            {
-                return handlers.FirstOrDefault();
-            }
-        }
-
-        private IPacketHandler LastHandler
-        {
-            get
-            {
-                return handlers.LastOrDefault();
-            }
-        }
-
-        internal AlbionParser AddHandler(IPacketHandler handler)
-        {
-            LastHandler?.SetNext(handler);
             handlers.Add(handler);
-
-            return this;
         }
+
+        //public AlbionParser AddEventHandler<TEvent>(EventCodes eventCode, Action<TEvent> action) where TEvent : BaseEvent
+        //{
+        //    handlers.Add(new EventHandler<TEvent>(eventCode, action));
+
+        //    return this;
+        //}
+
+        //public AlbionParser AddRequestHandler<TOpearation>(OperationCodes operationCode, Action<TOpearation> action) where TOpearation : BaseOperation
+        //{
+        //    var handler = new RequestHandler<TOpearation>(operationCode, action);
+
+        //    albionParser.AddHandler(handler);
+
+        //    return albionParser;
+        //}
+
+        //public AlbionParser AddResponseHandler<TOperation>(OperationCodes operationCode, Action<TOperation> action) where TOperation : BaseOperation
+        //{
+        //    var handler = new ResponseHandler<TOperation>(operationCode, action);
+
+        //    albionParser.AddHandler(handler);
+
+        //    return albionParser;
+        //}
 
         protected override void OnEvent(byte Code, Dictionary<byte, object> Parameters)
         {
@@ -51,7 +57,7 @@ namespace Albion.Network
             EventCodes eventCode = ParseEventCode(Parameters);
             var eventPacket = new EventPacket(eventCode, Parameters);
 
-            FirstHandler?.Handle(eventPacket);
+            handlers.Handle(eventPacket);
         }
 
         protected override void OnRequest(byte OperationCode, Dictionary<byte, object> Parameters)
@@ -59,7 +65,7 @@ namespace Albion.Network
             OperationCodes operationCode = ParseOperationCode(Parameters);
             var requestPacket = new RequestPacket(operationCode, Parameters);
 
-            FirstHandler?.Handle(requestPacket);
+            handlers.Handle(requestPacket);
         }
 
         protected override void OnResponse(byte OperationCode, short ReturnCode, string DebugMessage, Dictionary<byte, object> Parameters)
@@ -67,14 +73,14 @@ namespace Albion.Network
             OperationCodes operationCode = ParseOperationCode(Parameters);
             var responsePacket = new ResponsePacket(operationCode, Parameters);
 
-            FirstHandler?.Handle(responsePacket);
+            handlers.Handle(responsePacket);
         }
 
         private OperationCodes ParseOperationCode(Dictionary<byte, object> parameters)
         {
             if (!parameters.TryGetValue(253, out var value))
             {
-                throw new AlbionException();
+                throw new InvalidOperationException();
             }
 
             return (OperationCodes)value;
@@ -84,7 +90,7 @@ namespace Albion.Network
         {
             if (!parameters.TryGetValue(252, out var value))
             {
-                throw new AlbionException();
+                throw new InvalidOperationException();
             }
 
             return (EventCodes)value;

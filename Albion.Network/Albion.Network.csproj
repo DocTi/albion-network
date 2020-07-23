@@ -59,19 +59,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AlbionException.cs" />
     <Compile Include="AlbionParser.cs" />
-    <Compile Include="AlbionParserExtensions.cs" />
+    <Compile Include="IPhotonReceiver.cs" />
+    <Compile Include="ReceiverBuilder.cs" />
     <Compile Include="BaseEvent.cs" />
     <Compile Include="BaseOperation.cs" />
-    <Compile Include="EventHandler.cs" />
+    <Compile Include="EventPacketHandler.cs" />
     <Compile Include="EventPacket.cs" />
+    <Compile Include="HandlersCollection.cs" />
     <Compile Include="IPacketHandler.cs" />
     <Compile Include="PacketHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RequestHandler.cs" />
+    <Compile Include="RequestPacketHandler.cs" />
     <Compile Include="RequestPacket.cs" />
-    <Compile Include="ResponseHandler.cs" />
+    <Compile Include="ResponsePacketHandler.cs" />
     <Compile Include="ResponsePacket.cs" />
   </ItemGroup>
   <ItemGroup>
