@@ -2,15 +2,16 @@
 
 Provides convenient work with network events Albion Online.
 
-Project Description:
+## Installing
+You should install [Albion Network with NuGet:](https://www.nuget.org/packages/Albion.Network/)
+```
+Install-Package Albion.Network
+```
 
-**Albion.Common** - contains common classes.  
-**Albion.Event** - classes "Event" of events.  
-**Albion.Operation** - classes "Operation" of events.  
-**Albion.Network** - main project.  
+## Dependencies
+[WinPcap](https://www.winpcap.org) which comes with [Wireshark](https://www.wireshark.org)
 
-Usage example:
-
+## Example
 In this example, we enable the processing of the message "Operation.Move".
 ```c#
 
@@ -53,9 +54,3 @@ void PacketHandler(Packet packet)
 ```
 
 A full example can be found here [Example](https://github.com/DocTi/albion-network/blob/master/Albion.Network.Example/Program.cs)
-
-## Dependencies
-[WinPcap](https://www.winpcap.org) which comes with [Wireshark](https://www.wireshark.org)
-
-## NuGet
-[Albion.Network](https://www.nuget.org/packages/Albion.Network/)  
