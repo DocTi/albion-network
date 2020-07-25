@@ -41,13 +41,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AttachItemContainerEvent.cs" />
     <Compile Include="DebugEvent.cs" />
+    <Compile Include="DetachItemContainerEvent.cs" />
     <Compile Include="HarvestableObjectEvent.cs" />
     <Compile Include="JoinFinishedEvent.cs" />
     <Compile Include="LeaveEvent.cs" />
     <Compile Include="MoveEvent.cs" />
     <Compile Include="NewCharacterEvent.cs" />
     <Compile Include="NewSimpleHarvestableObjectListEvent.cs" />
+    <Compile Include="NewSimpleItemEvent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
