@@ -6,16 +6,16 @@ using System;
 
 namespace Albion.Network
 {
-    public class EventPacketHandler<TEvent> : PacketHandler<EventPacket> where TEvent : BaseEvent
+    public abstract class EventPacketHandler<TEvent> : PacketHandler<EventPacket> where TEvent : BaseEvent
     {
         private readonly EventCodes eventCode;
-        private readonly Action<TEvent> action;
 
-        public EventPacketHandler(EventCodes eventCode, Action<TEvent> action)
+        public EventPacketHandler(EventCodes eventCode)
         {
             this.eventCode = eventCode;
-            this.action = action;
         }
+
+        protected abstract void OnAction(TEvent value);
 
         protected internal override void OnHandle(EventPacket packet)
         {
@@ -27,7 +27,7 @@ namespace Albion.Network
             {
                 TEvent instance = (TEvent)Activator.CreateInstance(typeof(TEvent), packet.Parameters);
 
-                action.Invoke(instance);
+                OnAction(instance);
             }
         }
     }

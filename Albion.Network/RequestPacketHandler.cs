@@ -6,16 +6,16 @@ using System;
 
 namespace Albion.Network
 {
-    public class RequestPacketHandler<TOperation> : PacketHandler<RequestPacket> where TOperation : BaseOperation
+    public abstract class RequestPacketHandler<TOperation> : PacketHandler<RequestPacket> where TOperation : BaseOperation
     {
         private readonly OperationCodes operationCode;
-        private readonly Action<TOperation> action;
 
-        public RequestPacketHandler(OperationCodes operationCode, Action<TOperation> action)
+        public RequestPacketHandler(OperationCodes operationCode)
         {
             this.operationCode = operationCode;
-            this.action = action;
         }
+
+        protected abstract void OnAction(TOperation value);
 
         protected internal override void OnHandle(RequestPacket packet)
         {
@@ -27,7 +27,7 @@ namespace Albion.Network
             {
                 TOperation instance = (TOperation)Activator.CreateInstance(typeof(TOperation), packet.Parameters);
 
-                action.Invoke(instance);
+                OnAction(instance);
             }
         }
     }

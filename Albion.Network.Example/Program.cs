@@ -1,7 +1,4 @@
-﻿using Albion.Common;
-using Albion.Event;
-using Albion.Operation;
-using PcapDotNet.Core;
+﻿using PcapDotNet.Core;
 using PcapDotNet.Packets;
 using PcapDotNet.Packets.IpV4;
 using PcapDotNet.Packets.Transport;
@@ -19,18 +16,9 @@ namespace Albion.Network.Example
         {
             ReceiverBuilder builder = ReceiverBuilder.Create();
 
-            builder.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
-            {
-                Console.WriteLine($"Move request");
-            });
-            builder.AddEventHandler<MoveEvent>(EventCodes.Move, (operation) =>
-            {
-                Console.WriteLine($"Id: {operation.Id} x: {operation.Position[0]} y: {operation.Position[1]}");
-            });
-            builder.AddEventHandler<NewCharacterEvent>(EventCodes.NewCharacter, (operation) =>
-            {
-                Console.WriteLine($"New ch Id: {operation.Id}");
-            });
+            builder.AddRequestHandler(new MoveRequestHandler());
+            builder.AddEventHandler(new MoveEventHandler());
+            builder.AddEventHandler(new NewCharacterEventHandler());
 
             receiver = builder.Build();
 

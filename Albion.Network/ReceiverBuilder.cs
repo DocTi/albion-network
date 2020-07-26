@@ -24,23 +24,23 @@ namespace Albion.Network
             return this;
         }
 
-        public ReceiverBuilder AddEventHandler<TEvent>(EventCodes code, Action<TEvent> action) where TEvent : BaseEvent
+        public ReceiverBuilder AddEventHandler<TEvent>(EventPacketHandler<TEvent> handler) where TEvent : BaseEvent
         {
-            AddHandler(new EventPacketHandler<TEvent>(code, action));
+            AddHandler(handler);
 
             return this;
         }
 
-        public ReceiverBuilder AddRequestHandler<TOperation>(OperationCodes code, Action<TOperation> action) where TOperation : BaseOperation
+        public ReceiverBuilder AddRequestHandler<TOperation>(RequestPacketHandler<TOperation> handler) where TOperation : BaseOperation
         {
-            AddHandler(new RequestPacketHandler<TOperation>(code, action));
+            AddHandler(handler);
 
             return this;
         }
 
-        public ReceiverBuilder AddResponseHandler<TOperation>(OperationCodes code, Action<TOperation> action) where TOperation : BaseOperation
+        public ReceiverBuilder AddResponseHandler<TOperation>(ResponsePacketHandler<TOperation> handler) where TOperation : BaseOperation
         {
-            AddHandler(new ResponsePacketHandler<TOperation>(code, action));
+            AddHandler(handler);
 
             return this;
         }
