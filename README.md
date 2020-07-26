@@ -20,13 +20,30 @@ using Albion.Operation;
 using Albion.Network;
 
 ReceiverBuilder builder = ReceiverBuilder.Create();
-builder.AddRequestHandler<MoveOperation>(OperationCodes.Move, (operation) =>
-{
-  Console.WriteLine($"Move request");
-});
+
+builder.AddRequestHandler(new MoveRequestHandler());
 
 IPhotonReceiver receiver = builder.Build();
             
+```
+
+```c#
+using Albion.Common;
+using Albion.Operation;
+using System;
+
+namespace Albion.Network.Example
+{
+    public class MoveRequestHandler : RequestPacketHandler<MoveOperation>
+    {
+        public MoveRequestHandler() : base(OperationCodes.Move) { }
+
+        protected override void OnAction(MoveOperation value)
+        {
+            Console.WriteLine($"Move request");
+        }
+    }
+}
 ```
 
 To capture network packets we need **PcapDotNet**.
