@@ -17,23 +17,30 @@ namespace Albion.Network
             return new ReceiverBuilder();
         }
 
+        public ReceiverBuilder AddHandler<TPacket>(PacketHandler<TPacket> handler)
+        {
+            parser.AddHandler(handler);
+
+            return this;
+        }
+
         public ReceiverBuilder AddEventHandler<TEvent>(EventCodes code, Action<TEvent> action) where TEvent : BaseEvent
         {
-            parser.AddHandler(new EventPacketHandler<TEvent>(code, action));
+            AddHandler(new EventPacketHandler<TEvent>(code, action));
 
             return this;
         }
 
         public ReceiverBuilder AddRequestHandler<TOperation>(OperationCodes code, Action<TOperation> action) where TOperation : BaseOperation
         {
-            parser.AddHandler(new RequestPacketHandler<TOperation>(code, action));
+            AddHandler(new RequestPacketHandler<TOperation>(code, action));
 
             return this;
         }
 
         public ReceiverBuilder AddResponseHandler<TOperation>(OperationCodes code, Action<TOperation> action) where TOperation : BaseOperation
         {
-            parser.AddHandler(new ResponsePacketHandler<TOperation>(code, action));
+            AddHandler(new ResponsePacketHandler<TOperation>(code, action));
 
             return this;
         }

@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Albion.Network
 {
-    internal class RequestPacket
+    public class RequestPacket
     {
         public RequestPacket(OperationCodes operationCode, Dictionary<byte, object> Parameters)
         {

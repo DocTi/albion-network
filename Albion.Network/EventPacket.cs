@@ -6,7 +6,7 @@ using System.Collections.Generic;
 
 namespace Albion.Network
 {
-    internal class EventPacket
+    public class EventPacket
     {
         public EventPacket(EventCodes eventCode, Dictionary<byte, object> parameters)
         {

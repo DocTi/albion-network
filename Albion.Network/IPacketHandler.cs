@@ -3,7 +3,7 @@
 
 namespace Albion.Network
 {
-    internal interface IPacketHandler
+    public interface IPacketHandler
     {
         void Handle(object request);
     }

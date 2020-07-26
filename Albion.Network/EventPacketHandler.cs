@@ -6,7 +6,7 @@ using System;
 
 namespace Albion.Network
 {
-    internal class EventPacketHandler<TEvent> : PacketHandler<EventPacket> where TEvent : BaseEvent
+    public class EventPacketHandler<TEvent> : PacketHandler<EventPacket> where TEvent : BaseEvent
     {
         private readonly EventCodes eventCode;
         private readonly Action<TEvent> action;

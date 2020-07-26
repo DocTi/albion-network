@@ -6,7 +6,7 @@ using System;
 
 namespace Albion.Network
 {
-    internal class ResponsePacketHandler<TOperation> : PacketHandler<ResponsePacket> where TOperation : BaseOperation
+    public class ResponsePacketHandler<TOperation> : PacketHandler<ResponsePacket> where TOperation : BaseOperation
     {
         private readonly OperationCodes operationCode;
         private readonly Action<TOperation> action;

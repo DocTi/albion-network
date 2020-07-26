@@ -3,7 +3,7 @@
 
 namespace Albion.Network
 {
-    internal abstract class PacketHandler<TPacket> : IPacketHandler
+    public abstract class PacketHandler<TPacket> : IPacketHandler
     {
         private IPacketHandler nextHandler;
 
