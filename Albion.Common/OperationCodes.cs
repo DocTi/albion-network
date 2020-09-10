@@ -97,7 +97,6 @@ namespace Albion.Common
         AuctionGetMyOpenOffers,
         AuctionGetMyOpenRequests,
         AuctionGetMyOpenAuctions,
-        AuctionGetItemsAverage,
         AuctionGetItemAverageStats,
         AuctionGetItemAverageValue,
         ContainerOpen,
@@ -396,6 +395,6 @@ namespace Albion.Common
         GetNextOpenWorldAttackScheduleTime,
         RecoverVaultFromHideout,
         GetGuildEnergyDrainInfo,
-        ChannelingUpdate,
+        ChannelingUpdate
     }
 }
