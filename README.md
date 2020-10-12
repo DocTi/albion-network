@@ -2,6 +2,11 @@
 
 Provides convenient work with network events Albion Online.
 
+## v4.6.0
+Migrating from PcapDotNet to SharpPcap. Change the target platforms .NET 4.7.1 on the .NET Standart 2.0 and .NET Core 3.1. Windows and Linux support.
+
+STAR if you liked it, thank you!
+
 ## Installing
 You should install [Albion Network with NuGet:](https://www.nuget.org/packages/Albion.Network/)
 ```
@@ -9,12 +14,13 @@ Install-Package Albion.Network
 ```
 
 ## Dependencies
-[WinPcap](https://www.winpcap.org) which comes with [Wireshark](https://www.wireshark.org)
+* On Windows, [Npcap](https://nmap.org/download.html) (formerly WinPcap) extensions
+* On Linux, [libpcap](http://www.tcpdump.org/manpages/pcap.3pcap.html)
+Read more here [sharppcap](https://github.com/chmorgan/sharppcap)
 
 ## Example
 In this example, we enable the processing of the message "Operation.Move".
 ```c#
-
 using Albion.Common;
 using Albion.Operation;
 using Albion.Network;
@@ -28,8 +34,6 @@ IPhotonReceiver receiver = builder.Build();
 ```
 
 ```c#
-using Albion.Common;
-using Albion.Operation;
 using System;
 
 namespace Albion.Network.Example
@@ -48,26 +52,25 @@ namespace Albion.Network.Example
 
 To capture network packets we need **PcapDotNet**.
 ```c#
-using Albion.Network;
-using PcapDotNet.Core;
-using PcapDotNet.Packets;
-using PcapDotNet.Packets.IpV4;
-using PcapDotNet.Packets.Transport;
+using PacketDotNet;
+using SharpPcap;
+using System;
+using System.Threading;
 
-var albionParser = new AlbionParser();
+private IPhotonReceiver receiver;
 
-void PacketHandler(Packet packet)
+...
+
+private void PacketHandler(object sender, CaptureEventArgs e)
 {
-  IpV4Datagram ip = packet.Ethernet.IpV4;
-  UdpDatagram udp = ip.Udp;
-  
-  if (udp == null || (udp.SourcePort != 5056 && udp.DestinationPort != 5056))
-  {
-    return;
-  }
-  
-  receiver.ReceivePacket(udp.Payload.ToArray());
+    UdpPacket packet = Packet.ParsePacket(e.Packet.LinkLayerType, e.Packet.Data).Extract<UdpPacket>();
+    if (packet != null && (packet.SourcePort == 5056 || packet.DestinationPort == 5056))
+    {
+        receiver.ReceivePacket(packet.PayloadData);
+    }
 }
 ```
 
 A full example can be found here [Example](https://github.com/DocTi/albion-network/blob/master/Albion.Network.Example/Program.cs)
+
+**Feedback** Discord DocTi#1410 
