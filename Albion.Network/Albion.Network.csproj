@@ -13,6 +13,7 @@
     <Copyright>Copyright ©  2020</Copyright>
     <PackageProjectUrl>https://github.com/DocTi/albion-network</PackageProjectUrl>
     <PackageTags>albion,albion online,photon</PackageTags>
+    <PackageReleaseNotes>Migrating from PcapDotNet to SharpPcap.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
