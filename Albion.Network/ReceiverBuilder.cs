@@ -1,7 +1,4 @@
-﻿using Albion.Common;
-using System;
-
-namespace Albion.Network
+﻿namespace Albion.Network
 {
     public class ReceiverBuilder
     {

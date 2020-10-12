@@ -3,15 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29009.5
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "Albion.Network.Example\Albion.Network.Example.csproj", "{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network", "Albion.Network\Albion.Network.csproj", "{5D4FEE20-C5BB-4C8F-B680-39B9CE60A9A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network", "Albion.Network\Albion.Network.csproj", "{4D1A1F8D-46E1-456D-83CF-78E4D7DD6FA7}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Common", "Albion.Common\Albion.Common.csproj", "{BAD21844-F93F-4F46-B540-28631D7B0255}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Event", "Albion.Event\Albion.Event.csproj", "{B0AF151A-78A3-4B07-975D-6C29611E3AA9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Operation", "Albion.Operation\Albion.Operation.csproj", "{FA3FC058-ECB5-4B10-B601-0F54DB23CA92}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Albion.Network.Example", "Albion.Network.Example\Albion.Network.Example.csproj", "{B307F53D-770D-41FF-90A2-76FFCB4B3230}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,26 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EE2000CC-A492-4831-A6AE-4D61C8FD78DF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{4D1A1F8D-46E1-456D-83CF-78E4D7DD6FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{4D1A1F8D-46E1-456D-83CF-78E4D7DD6FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{4D1A1F8D-46E1-456D-83CF-78E4D7DD6FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{4D1A1F8D-46E1-456D-83CF-78E4D7DD6FA7}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BAD21844-F93F-4F46-B540-28631D7B0255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BAD21844-F93F-4F46-B540-28631D7B0255}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BAD21844-F93F-4F46-B540-28631D7B0255}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BAD21844-F93F-4F46-B540-28631D7B0255}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B0AF151A-78A3-4B07-975D-6C29611E3AA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B0AF151A-78A3-4B07-975D-6C29611E3AA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B0AF151A-78A3-4B07-975D-6C29611E3AA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B0AF151A-78A3-4B07-975D-6C29611E3AA9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{FA3FC058-ECB5-4B10-B601-0F54DB23CA92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FA3FC058-ECB5-4B10-B601-0F54DB23CA92}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FA3FC058-ECB5-4B10-B601-0F54DB23CA92}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{FA3FC058-ECB5-4B10-B601-0F54DB23CA92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D4FEE20-C5BB-4C8F-B680-39B9CE60A9A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D4FEE20-C5BB-4C8F-B680-39B9CE60A9A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D4FEE20-C5BB-4C8F-B680-39B9CE60A9A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D4FEE20-C5BB-4C8F-B680-39B9CE60A9A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B307F53D-770D-41FF-90A2-76FFCB4B3230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B307F53D-770D-41FF-90A2-76FFCB4B3230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B307F53D-770D-41FF-90A2-76FFCB4B3230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B307F53D-770D-41FF-90A2-76FFCB4B3230}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

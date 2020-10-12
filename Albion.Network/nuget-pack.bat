@@ -1,1 +1,0 @@
-nuget pack .\Albion.Network.csproj -IncludeReferencedProjects -properties Configuration=Release

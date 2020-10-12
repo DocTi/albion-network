@@ -1,8 +1,7 @@
-﻿using Albion.Network;
-using System;
+﻿using System;
 using System.Collections.Generic;
 
-namespace Albion.Event
+namespace Albion.Network.Example
 {
     public class MoveEvent : BaseEvent
     {

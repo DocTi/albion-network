@@ -1,11 +1,6 @@
-﻿// This is an open source non-commercial project. Dear PVS-Studio, please check it.
-// PVS-Studio Static Code Analyzer for C, C++ and C#: http://www.viva64.com
+﻿using System.Collections.Generic;
 
-using Albion.Common;
-using Albion.Network;
-using System.Collections.Generic;
-
-namespace Albion.Event
+namespace Albion.Network.Example
 {
     public class NewCharacterEvent : BaseEvent
     {

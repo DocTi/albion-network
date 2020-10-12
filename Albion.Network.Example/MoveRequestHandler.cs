@@ -1,6 +1,4 @@
-﻿using Albion.Common;
-using Albion.Operation;
-using System;
+﻿using System;
 
 namespace Albion.Network.Example
 {

@@ -1,9 +1,6 @@
-﻿using PcapDotNet.Core;
-using PcapDotNet.Packets;
-using PcapDotNet.Packets.IpV4;
-using PcapDotNet.Packets.Transport;
+﻿using PacketDotNet;
+using SharpPcap;
 using System;
-using System.Linq;
 using System.Threading;
 
 namespace Albion.Network.Example
@@ -24,17 +21,16 @@ namespace Albion.Network.Example
 
             Console.WriteLine("Start");
 
-            var devices = LivePacketDevice.AllLocalMachine;
+            CaptureDeviceList devices = CaptureDeviceList.Instance;
             foreach (var device in devices)
             {
                 new Thread(() =>
                 {
                     Console.WriteLine($"Open... {device.Description}");
 
-                    using (PacketCommunicator communicator = device.Open(65536, PacketDeviceOpenAttributes.Promiscuous, 1000))
-                    {
-                        communicator.ReceivePackets(0, PacketHandler);
-                    }
+                    device.OnPacketArrival += new PacketArrivalEventHandler(PacketHandler);
+                    device.Open(DeviceMode.Promiscuous, 1000);
+                    device.StartCapture();
                 })
                 .Start();
             }
@@ -42,17 +38,13 @@ namespace Albion.Network.Example
             Console.Read();
         }
 
-        private static void PacketHandler(Packet packet)
+        private static void PacketHandler(object sender, CaptureEventArgs e)
         {
-            IpV4Datagram ip = packet.Ethernet.IpV4;
-            UdpDatagram udp = ip.Udp;
-
-            if (udp == null || (udp.SourcePort != 5056 && udp.DestinationPort != 5056))
+            UdpPacket packet = Packet.ParsePacket(e.Packet.LinkLayerType, e.Packet.Data).Extract<UdpPacket>();
+            if (packet != null && (packet.SourcePort == 5056 || packet.DestinationPort == 5056))
             {
-                return;
+                receiver.ReceivePacket(packet.PayloadData);
             }
-
-            receiver.ReceivePacket(udp.Payload.ToArray());
         }
     }
 }
