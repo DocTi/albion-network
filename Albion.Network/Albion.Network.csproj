@@ -4,8 +4,8 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>Albion.Network</PackageId>
-    <Version>4.5.0</Version>
-    <AssemblyVersion>4.5.0.0</AssemblyVersion>
+    <Version>4.6.0</Version>
+    <AssemblyVersion>4.6.0.0</AssemblyVersion>
     <Authors>DocTi</Authors>
     <Company>DocTi</Company>
     <Product>Albion Network</Product>
