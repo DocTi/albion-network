@@ -2,6 +2,11 @@
 
 Provides convenient work with network events Albion Online.
 
+## v4.7.0
+Brimstone & Mist
+
+- Updating event codes
+
 ## v4.6.0
 Migrating from PcapDotNet to SharpPcap. Change the target platforms .NET 4.7.1 on the .NET Standart 2.0 and .NET Core 3.1. Windows and Linux support.
 
