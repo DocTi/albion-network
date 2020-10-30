@@ -290,6 +290,7 @@
         DefenseUnitAttackDamage,
         UnrestrictedPvpZoneUpdate,
         ReputationImplicationUpdate,
+        Unknown287, // ???
         NewMountObject,
         MountHealthUpdate,
         MountCooldownUpdate,
