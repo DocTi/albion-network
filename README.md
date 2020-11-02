@@ -56,7 +56,7 @@ namespace Albion.Network.Example
 }
 ```
 
-To capture network packets we need **PcapDotNet**.
+To capture network packets we need **Sharppcap**.
 ```c#
 using PacketDotNet;
 using SharpPcap;
