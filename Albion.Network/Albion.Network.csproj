@@ -12,8 +12,9 @@
     <Description>Provides convenient work with network events Albion Online.</Description>
     <Copyright>Copyright ©  2020</Copyright>
     <PackageProjectUrl>https://github.com/DocTi/albion-network</PackageProjectUrl>
-    <PackageTags>albion,albion online,photon</PackageTags>
-    <PackageReleaseNotes>Brimstone &amp; Mist patch</PackageReleaseNotes>
+    <PackageTags>albion,albiononline,photon</PackageTags>
+    <PackageReleaseNotes>Refusal to support the spike of events and the list of operations and 
+asynchronous event and operation handlers.</PackageReleaseNotes>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
