@@ -5,7 +5,7 @@ namespace Albion.Network.Example
 {
     public class MoveEventHandler : EventPacketHandler<MoveEvent>
     {
-        public MoveEventHandler() : base(3) { }
+        public MoveEventHandler() : base(EventCodes.Move) { }
 
         protected override Task OnActionAsync(MoveEvent value)
         {

@@ -5,7 +5,7 @@ namespace Albion.Network.Example
 {
     public class NewCharacterEventHandler : EventPacketHandler<NewCharacterEvent>
     {
-        public NewCharacterEventHandler() : base(25) { }
+        public NewCharacterEventHandler() : base(EventCodes.NewCharacter) { }
 
         protected override Task OnActionAsync(NewCharacterEvent value)
         {

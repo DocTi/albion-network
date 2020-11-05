@@ -5,7 +5,7 @@ namespace Albion.Network.Example
 {
     public class MoveRequestHandler : RequestPacketHandler<MoveOperation>
     {
-        public MoveRequestHandler() : base(21) { }
+        public MoveRequestHandler() : base(OperationCodes.Move) { }
 
         protected override Task OnActionAsync(MoveOperation value)
         {
