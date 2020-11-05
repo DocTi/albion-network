@@ -29,7 +29,10 @@ namespace Albion.Network
 
         public async Task HandleAsync(object request)
         {
-            await Last?.HandleAsync(request);
+            if (Last != null)
+            {
+                await Last.HandleAsync(request);
+            }
         }
     }
 }

@@ -31,7 +31,7 @@ namespace Albion.Network
 
         protected Task NextAsync(object request)
         {
-            return nextHandler?.HandleAsync(request);
+            return nextHandler?.HandleAsync(request) ?? Task.CompletedTask;
         }
     }
 }
