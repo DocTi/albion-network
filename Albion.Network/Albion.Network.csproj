@@ -13,8 +13,10 @@
     <Copyright>Copyright ©  2020</Copyright>
     <PackageProjectUrl>https://github.com/DocTi/albion-network</PackageProjectUrl>
     <PackageTags>albion,albiononline,photon</PackageTags>
-    <PackageReleaseNotes>Refusal to support the spike of events and the list of operations and 
-asynchronous event and operation handlers.</PackageReleaseNotes>
+    <PackageReleaseNotes>Refusal to support the list of events and operations.
+Asynchronous event and operation handlers.
+
+No supports backward compatibility with version 4.7.0!</PackageReleaseNotes>
     <PackageLicenseExpression></PackageLicenseExpression>
     <PackageLicenseFile>LICENSE</PackageLicenseFile>
   </PropertyGroup>
