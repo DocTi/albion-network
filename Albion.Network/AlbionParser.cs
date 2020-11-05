@@ -1,6 +1,7 @@
 ﻿using PhotonPackageParser;
 using System;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace Albion.Network
 {
@@ -22,49 +23,49 @@ namespace Albion.Network
         {
             if (Code == 2)
             {
-                Parameters.Add(252, (short)EventCodes.Move);
+                Parameters.Add(252, EventCodes.Move);
             }
 
-            EventCodes eventCode = ParseEventCode(Parameters);
+            short eventCode = ParseEventCode(Parameters);
             var eventPacket = new EventPacket(eventCode, Parameters);
 
-            handlers.Handle(eventPacket);
+            _ = handlers.HandleAsync(eventPacket);
         }
 
         protected override void OnRequest(byte OperationCode, Dictionary<byte, object> Parameters)
         {
-            OperationCodes operationCode = ParseOperationCode(Parameters);
+            short operationCode = ParseOperationCode(Parameters);
             var requestPacket = new RequestPacket(operationCode, Parameters);
 
-            handlers.Handle(requestPacket);
+            _ = handlers.HandleAsync(requestPacket);
         }
 
         protected override void OnResponse(byte OperationCode, short ReturnCode, string DebugMessage, Dictionary<byte, object> Parameters)
         {
-            OperationCodes operationCode = ParseOperationCode(Parameters);
+            short operationCode = ParseOperationCode(Parameters);
             var responsePacket = new ResponsePacket(operationCode, Parameters);
 
-            handlers.Handle(responsePacket);
+            _ = handlers.HandleAsync(responsePacket);
         }
 
-        private OperationCodes ParseOperationCode(Dictionary<byte, object> parameters)
+        private short ParseOperationCode(Dictionary<byte, object> parameters)
         {
-            if (!parameters.TryGetValue(253, out var value))
+            if (!parameters.TryGetValue(253, out object value))
             {
                 throw new InvalidOperationException();
             }
 
-            return (OperationCodes)value;
+            return (short)value;
         }
 
-        private EventCodes ParseEventCode(Dictionary<byte, object> parameters)
+        private short ParseEventCode(Dictionary<byte, object> parameters)
         {
-            if (!parameters.TryGetValue(252, out var value))
+            if (!parameters.TryGetValue(252, out object value))
             {
                 throw new InvalidOperationException();
             }
 
-            return (EventCodes)value;
+            return (short)value;
         }
     }
 }

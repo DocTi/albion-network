@@ -1,7 +1,9 @@
-﻿namespace Albion.Network
+﻿using System.Threading.Tasks;
+
+namespace Albion.Network
 {
     public interface IPacketHandler
     {
-        void Handle(object request);
+        Task HandleAsync(object request);
     }
 }

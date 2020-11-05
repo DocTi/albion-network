@@ -1,29 +1,30 @@
 ﻿using System;
+using System.Threading.Tasks;
 
 namespace Albion.Network
 {
     public abstract class RequestPacketHandler<TOperation> : PacketHandler<RequestPacket> where TOperation : BaseOperation
     {
-        private readonly OperationCodes operationCode;
+        private readonly int operationCode;
 
-        public RequestPacketHandler(OperationCodes operationCode)
+        public RequestPacketHandler(int operationCode)
         {
             this.operationCode = operationCode;
         }
 
-        protected abstract void OnAction(TOperation value);
+        protected abstract Task OnActionAsync(TOperation value);
 
-        protected internal override void OnHandle(RequestPacket packet)
+        protected internal override Task OnHandleAsync(RequestPacket packet)
         {
             if (operationCode != packet.OperationCode)
             {
-                Next(packet);
+                return NextAsync(packet);
             }
             else
             {
                 TOperation instance = (TOperation)Activator.CreateInstance(typeof(TOperation), packet.Parameters);
 
-                OnAction(instance);
+                return OnActionAsync(instance);
             }
         }
     }

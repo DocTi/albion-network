@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Albion.Network
 {
@@ -26,9 +27,9 @@ namespace Albion.Network
             handlers.Add(handler);
         }
 
-        public void Handle(object request)
+        public async Task HandleAsync(object request)
         {
-            Last?.Handle(request);
+            await Last?.HandleAsync(request);
         }
     }
 }
