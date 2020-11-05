@@ -1,7 +1,6 @@
 ﻿using PhotonPackageParser;
 using System;
 using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace Albion.Network
 {
