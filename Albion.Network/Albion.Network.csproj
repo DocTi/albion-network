@@ -23,10 +23,12 @@ No supports backward compatibility with version 4.7.0!</PackageReleaseNotes>
 
   <ItemGroup>
     <None Remove="legacy\EventCodes.txt" />
+    <None Remove="legacy\OperationCodes.txt" />
   </ItemGroup>
 
   <ItemGroup>
     <Compile Include="legacy\EventCodes.txt" />
+    <Compile Include="legacy\OperationCodes.txt" />
   </ItemGroup>
 
   <ItemGroup>
