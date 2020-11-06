@@ -28,6 +28,11 @@ namespace Albion.Network
             short eventCode = ParseEventCode(Parameters);
             var eventPacket = new EventPacket(eventCode, Parameters);
 
+            if (eventCode == 25)
+            {
+
+            }
+
             _ = handlers.HandleAsync(eventPacket);
         }
 
