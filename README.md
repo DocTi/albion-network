@@ -2,6 +2,13 @@
 
 Provides convenient work with network events Albion Online.
 
+## v5.0.0
+- Refusal to support the list of events and operations.
+- Asynchronous event and operation handlers.
+
+!WARNING!
+No supports backward compatibility with version 4.7.0!
+
 ## v4.7.0
 Brimstone & Mist
 
