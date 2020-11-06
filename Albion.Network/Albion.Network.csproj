@@ -22,6 +22,14 @@ No supports backward compatibility with version 4.7.0!</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="legacy\EventCodes.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="legacy\EventCodes.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="PhotonPackageParser" Version="4.1.0" />
   </ItemGroup>
 
