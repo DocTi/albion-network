@@ -20,7 +20,7 @@ namespace Albion.Network
 
         protected override void OnEvent(byte Code, Dictionary<byte, object> Parameters)
         {
-            if (Code == 2)
+            if (Code == 3)
             {
                 Parameters.Add(252, EventCodes.Move);
             }
