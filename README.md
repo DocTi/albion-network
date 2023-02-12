@@ -86,4 +86,4 @@ private void PacketHandler(object sender, CaptureEventArgs e)
 
 A full example can be found here [Example](https://github.com/DocTi/albion-network/blob/master/Albion.Network.Example/Program.cs)
 
-**Feedback** Discord DocTi#1410 
+**Feedback** Discord DocTi#1529 
